@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <title>Установка</title>
+     <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--Header of the site-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Tut_Vue.js</a>
+        
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-md-0 float-right">
+                <li class="nav-item active">
+                <a class="nav-link" href="instalVue.html">Установка <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link" href="intro.html">Введение</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="test.html">Проверь свои знания</a>
+                </li>
+            </ul>
+        </div>  
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center">Установка</h1>
+        <h2>Предупреждение о совместимости</h2>
+        <p>
+        Vue не поддерживает IE8 и ниже, так как использует возможности ECMAScript 5, которые невозможно эмулировать в IE8. В остальном, поддерживаются все браузеры,
+        <a href="https://caniuse.com/#feat=es5">совместимые с ECMAScript 5.</a> 
+        </p>
+
+        <h2>Информация о релизах</h2>
+        <p>
+            Версия последнего релиза: 2.6.11 <br>
+            Подробная информация об изменениях в каждой версии доступна на <a href="https://github.com/vuejs/vue/releases">GitHub.</a> 
+        </p>
+
+        <h2>Инструменты разработчика и Vue</h2>
+        <hr>
+        <p>
+            При использовании Vue мы рекомендуем установить
+            <a href="https://github.com/vuejs/vue-devtools#vue-devtools"> Vue Devtools</a> в браузере, для большего удобства выполнения проверок и отладки ваших приложений Vue.
+        </p>
+
+        <h2>Подключение через &lt;script&gt;</h2>
+        <hr>
+        <p>
+            Просто скачайте JS-файл и подключите его тегом &lt;script&gt; на странице. Будет зарегистрирована глобальная переменная Vue.
+        </p>
+
+        <div class="media">
+            <img class="d-flex ml-3" src="images/warning.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">Внимание</h5>
+              Не используйте минифицированную версию во время разработки, иначе вы не будете получать предупреждения о типичных ошибках!            </div>
+          </div>
+
+          <a href="vue.js" download=""><button type="button" class="btn btn-success" >Версия для разработки</button> </a> <br>
+          <a href="vue.min.js" download=""><button type="button" class="btn btn-success">Версия дляproduction</button></a> 
+
+        <h2>CDN</h2>
+        <p class="flex-content">
+            Для создания прототипов или в целях обучения можно использовать последнюю версию:
+        </p>
+
+         <!--Show HTML code on site-->
+         <div id="accordion" role="tablist">
+            <div class="card">
+              <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                  <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Вариант 1
+                  </a>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body">
+
+                  <pre>
+                    <code>
+                    &lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
+                    </code>
+                  </pre>
+                    
+                </div>
+              </div>
+            </div>
+            Для production, мы рекомендуем указывать конкретную версию и сборку, чтобы избежать неожиданных поломок при выходе новых версий:
+            <div class="card">
+              <div class="card-header" role="tab" id="headingTwo">
+                <h5 class="mb-0">
+                  <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Вариант 2
+                  </a>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse show" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body">
+
+                  <pre>
+                    <code>
+                    &lt;script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"&gt;&lt;/script&gt;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+              
+            </div>
+
+            <h2>NPM</h2>
+            <hr>
+            <p>
+                Рекомендуем использовать NPM при создании крупных приложений на Vue. Этот вариант прекрасно работает в паре с инструментами сборки, такими как Webpack и Browserify. Во Vue также есть совместимые с ними инструменты для использования однофайловых компонентов.
+            </p>
+            <div id="accordion" role="tablist">
+            <div class="card">
+              <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                  <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Вариант 1
+                  </a>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body">
+
+                  <pre>
+                    <code>
+                        # последняя стабильная версия
+                        $ npm install vue
+                    </code>
+                  </pre>
+                    
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+         <!-- Footer -->
+      <footer>
+        <div class="box-containre text-white">
+          © 2019 Написан Лабунским Романом в рамках курсового проекта
+        </div>
+      </footer>
+	    <!-- ./Footer -->
+
+
+     <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

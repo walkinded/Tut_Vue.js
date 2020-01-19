@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Введение</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!--Header of the site-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Tut_Vue.js</a>
+        
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-md-0 float-right">
+                <li class="nav-item">
+                <a class="nav-link" href="instalVue.html">Установка <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="intro.html">Введение</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="test.html">Проверь свои знания</a>
+                  </li>
+            </ul>
+        </div>  
+    </nav>
+      
+      <!--Content of the site-->
+      <div class="container">
+          <h1 class="text-center">Введение</h1>
+          <h2>Что такое Vue.js?</h2>
+          <hr>
+          <p>
+              Vue (произносится /vjuː/, примерно как view) — это прогрессивный фреймворк для создания пользовательских интерфейсов. В отличие от фреймворков-монолитов, Vue создан пригодным для постепенного внедрения. Его ядро в первую очередь решает задачи уровня представления (view), что упрощает интеграцию с другими библиотеками и существующими проектами. С другой стороны, Vue полностью подходит и для создания сложных одностраничных приложений (SPA, Single-Page Applications), если использовать его совместно с современными инструментами и дополнительными библиотеками.
+          </p>
+          <p>
+            Если вы хотите узнать больше о Vue перед тем как начать, мы создали видео с рассказом об основных принципах работы на примере проекта.
+          </p>
+          <p>
+            Если вы — опытный фронтенд-разработчик, и хотите узнать, чем Vue отличается от остальных библиотек или фреймворков, обратите внимание на сравнение с другими фреймворками.
+          </p>
+
+          <div class="alert alert-info" role="alert">
+            <strong>Ролик:</strong> <a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_balnk">Посмотрите бесплатный видео-курс на Vue Mastery</a>
+        </div>
+
+        <h2>Начало работы</h2>
+          <hr>
+          <a href="instalVue.html"><button type="button" class="btn btn-success btn-lg">Установка</button></a>
+
+          <div class="media">
+            <img class="d-flex ml-3" src="images/warning.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">Внимание</h5>
+              В этом руководстве мы предполагаем, что вы уже знакомы с HTML, CSS и JavaScript на базовом уровне. Если же вы во фронтенд-разработке совсем новичок, начинать сразу с изучения фреймворка может быть не лучшей идеей — возвращайтесь, разобравшись с основами! Наличие опыта работы с другими фреймворками может помочь, но не является обязательным.
+            </div>
+          </div>
+          
+          <p class="flex-content">
+            Проще всего попробовать Vue.js, начав с <a href="https://jsfiddle.net/chrisvfritz/50wL7mdz/" target="_blank"> примера Hello World на JSFiddle.</a> Откройте его в другой вкладке, и изменяйте по ходу чтения руководства. Можно и просто создать index.html файл на диске и подключить Vue:
+          </p>
+
+          <!--Show HTML code on site-->
+            <div id="accordion" role="tablist">
+              <div class="card">
+                <div class="card-header" role="tab" id="headingOne">
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Вариант 1
+                    </a>
+                  </h5>
+                </div>
+            
+                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="card-body">
+
+                    <pre>
+                      <code>
+                        &lt;!--версия для разработки, отображает полезные предупреждения в консоли--&gt;
+                      &lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
+                      </code>
+                    </pre>
+                      
+                  </div>
+                </div>
+              </div>
+              или:
+              <div class="card">
+                <div class="card-header" role="tab" id="headingTwo">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Вариант 2
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="card-body">
+
+                    <pre>
+                      <code>
+                        &lt;!--production-версия, оптимизированная для размера и скорости--&gt;
+                      &lt;script src="https://cdn.jsdelivr.net/npm/vue"&gt;&lt;/script&gt;
+                      </code>
+                    </pre>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- -->
+              <p class="flex-content">
+                Если предпочитаете что-то более интерактивное, можете пройти <a href="https://scrimba.com/g/gvuedocs">эту серию уроков на Scrimba</a> , которая представляет собой сочетание скринкастов и песочницы для проверки примеров кода, где вы можете остановиться и продолжить изучение в любое время.
+              </p>
+            </div>
+
+            <!-- -->
+            <h2>Декларативная отрисовка</h2>
+            <hr>
+            <div class="alert alert-info" role="alert">
+              <strong>Ролик:</strong> <a href="https://scrimba.com/p/pXKqta/cQ3QVcr" target="_balnk">Пройдите этот урок на Scrimba</a>
+            </div>
+            
+            <p class="flex-content">В ядре Vue.js находится система, которая позволяет декларативно отображать данные в DOM с помощью простых шаблонов:</p>
+
+            <div id="accordion" role="tablist">
+              <div class="card">
+                <div class="card-header" role="tab" id="headingThree">
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      HTMl
+                    </a>
+                  </h5>
+                </div>
+            
+                <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="card-body">
+                    
+                    <pre>
+                      <code>
+                        &lt;div id="app"&gt;
+                        {{message}}
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                      
+                  </div>
+                </div>
+              </div>
+            
+              <div class="card">
+                <div class="card-header" role="tab" id="headingFour">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      JS
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                  <div class="card-body">
+
+                    <pre>
+                      <code>
+                        var app = new Vue({
+                          el: '#app',
+                          data: {
+                            message: 'Привет, Vue!'
+                          }
+                        })
+                      </code>
+                    </pre>
+
+                  </div>
+                </div>
+              </div>
+              <!--Result-->
+              <p class="lead">
+                //todo
+              </p>
+
+              <p class="flex-content">
+                Вот мы и создали наше первое Vue-приложение! Выглядит как простая отрисовка шаблона, но «под капотом» Vue выполнил немало работы. Данные и DOM теперь реактивно связаны. Как это проверить? Просто откройте консоль JavaScript в браузере (прямо здесь, на этой странице) и задайте свойству app.message новое значение. Вы тут же увидите соответствующее изменение в браузере.
+              </p>
+              <p class="flex-container">
+                Кроме интерполяции текста, можно также связывать атрибуты элементов:
+              </p>
+
+              <div id="accordion" role="tablist">
+                <div class="card">
+                  <div class="card-header" role="tab" id="heading1">
+                    <h5 class="mb-0">
+                      <a data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        HTMl
+                      </a>
+                    </h5>
+                  </div>
+              
+                  <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
+                    <div class="card-body">
+                      
+                      <pre>
+                        <code>
+                          &lt;div id="app-2"&gt;
+                            &lt;span v-bind:title="message"&gt;
+                              Наведи на меня курсор на пару секунд,
+                              чтобы увидеть динамически связанное значение title!
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                        </code>
+                      </pre>
+                        
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <div class="card-header" role="tab" id="heading2">
+                    <h5 class="mb-0">
+                      <a class="collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        JS
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
+                    <div class="card-body">
+  
+                      <pre>
+                        <code>
+                          var app = new Vue({
+                            el: '#app-2',
+                            data: {
+                              message: 'Вы загрузили эту страницу: ' + new Date().toLocaleString()
+                            }
+                          })
+                        </code>
+                      </pre>
+  
+                    </div>
+                  </div>
+                </div>
+                <p class="lead">
+                  //todo
+                </p>
+                <p class="flex-content">
+                  Здесь мы встречаемся с чем-то новым. Атрибут v-bind, называется директивой. Директивы имеют префикс v-,
+                   указывающий на их особую природу. Как вы уже могли догадаться, они добавляют к отображаемому DOM особое реактивное поведение,
+                    управляемое Vue. В данном примере директива говорит «сохраняй значение title этого элемента актуальным при изменении свойства message в экземпляре Vue».
+                </p>
+                <p class="flex-content">
+                  Откройте консоль JavaScript и введите app2.message = 'новое сообщение', вы увидите как связанный код HTML — в нашем случае, атрибут title — обновился.
+                </p>
+
+                <!-- -->
+                <h2>Условия и циклы</h2>
+            <hr>
+            <div class="alert alert-info" role="alert">
+              <strong>Ролик:</strong> <a href="https://scrimba.com/p/pXKqta/cEQe4SJ" target="_balnk">Пройдите этот урок на Scrimba</a>
+            </div>
+            <p class="flex-content">
+              Управлять присутствием элемента в DOM тоже довольно просто:
+            </p>
+            <div id="accordion" role="tablist">
+              <div class="card">
+                <div class="card-header" role="tab" id="heading1">
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                      HTMl
+                    </a>
+                  </h5>
+                </div>
+            
+                <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
+                  <div class="card-body">
+                    
+                    <pre>
+                      <code>
+                        &lt;div id="app-3"&gt;
+                          &lt;span v-if="seen"&gt;Сейчас меня видно&lt;/span&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                      
+                  </div>
+                </div>
+              </div>
+            
+              <div class="card">
+                <div class="card-header" role="tab" id="heading2">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                      JS
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
+                  <div class="card-body">
+
+                    <pre>
+                      <code>
+                        var app = new Vue({
+                          el: '#app-2',
+                          data: {
+                            seen: true
+                          }
+                        })
+                      </code>
+                    </pre>
+
+                  </div>
+                </div>
+              </div>
+            <!-- Result -->
+            <p class="lead">
+              Сейчас меня видно
+            </p>
+
+              <p class="flex-content">
+                Попробуйте ввести в консоли app3.seen = false. Сообщение пропадёт.
+              </p>
+              <p class="flex-content">
+                Этот пример демонстрирует возможность связывать данные не только с текстом и атрибутами, но и со структурой DOM. Более того, Vue также имеет мощную систему анимации, которая автоматически применяет эффекты переходов, когда элементы добавляются/обновляются/удаляются.
+              </p>
+              <p class="flex-content">
+                Есть и другие директивы, каждая из которых имеет своё предназначение. Например, директива v-for для отображения списков, используя данные из массива:
+              </p>
+              <div id="accordion" role="tablist">
+                <div class="card">
+                  <div class="card-header" role="tab" id="heading1">
+                    <h5 class="mb-0">
+                      <a data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        HTMl
+                      </a>
+                    </h5>
+                  </div>
+              
+                  <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
+                    <div class="card-body">
+                      
+                      <pre>
+                        <code>
+                          &lt;div id="app-4"&gt;
+                            &lt;ol&gt;
+                              &lt;li v-for="todo in todos"&gt;
+                              {{ todo.text }}
+                              &lt;/li&gt;
+                            &lt;/ol&gt;
+                          &lt;/div&gt;
+                        </code>
+                      </pre>
+                        
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <div class="card-header" role="tab" id="heading2">
+                    <h5 class="mb-0">
+                      <a class="collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        JS
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
+                    <div class="card-body">
+  
+                      <pre>
+                        <code>
+                          var app = new Vue({
+                            el: '#app-4',
+                            data {
+                              todos: [
+                              { text: 'Изучить JavaScript' },
+                              { text: 'Изучить Vue' },
+                              { text: 'Создать что-нибудь классное' }
+                              ]
+                            }
+                          })
+                        </code>
+                      </pre>
+  
+                    </div>
+                  </div>
+                </div>
+                <!-- Result -->
+                <p class="lead">
+                  1. Изучить JavaScript <br>
+                  2. Изучить Vue <br>
+                  3. Создать что нибудь :)
+                </p>
+                <p class="flex-content">
+                  Введите в консоли app4.todos.push({ text: 'Profit' }). Вы увидите, что к списку добавится новый элемент.
+                </p>
+
+                <!-- -->
+                <h2>Работа с пользовательским вводом</h2>
+            <hr>
+            <div class="alert alert-info" role="alert">
+              <strong>Ролик:</strong> <a href="https://scrimba.com/p/pXKqta/czPNaUr" target="_balnk">Пройдите этот урок на Scrimba</a>
+            </div>
+            <p class="flex-content">
+              Чтобы пользователи могли взаимодействовать с вашим приложением, используйте директиву v-on для отслеживания событий, указав метод-обработчик:
+            </p>
+
+            <div id="accordion" role="tablist">
+              <div class="card">
+                <div class="card-header" role="tab" id="heading1">
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                      HTMl
+                    </a>
+                  </h5>
+                </div>
+            
+                <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
+                  <div class="card-body">
+                    
+                    <pre>
+                      <code>
+                        &lt;div id="app-5"&gt;
+                          &lt;p&gt;
+                            {{ message }}
+                            &lt;/p&gt;
+                          &lt;button v-on:click="reverseMessage"&gt;Перевернуть сообщение&lt;/button&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                      
+                  </div>
+                </div>
+              </div>
+            
+              <div class="card">
+                <div class="card-header" role="tab" id="heading2">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                      JS
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
+                  <div class="card-body">
+
+                    <pre>
+                      <code>
+                        var app = new Vue({
+                          el: '#app-5',
+                          data {
+                            message: "Привет, Vue.js"
+                          },
+                          methods: {
+                            reverseMessage: function () {
+                              this.message = this.message.split('').reverse().join('')
+                            }
+                        })
+                      </code>
+                    </pre>
+
+                  </div>
+                </div>
+              </div>
+              <!--Result-->
+              <p class="lead">
+                Было: Привет, Vue.js<br>
+                Стало: sj.euV ,тевирП
+              </p>
+
+              <p class="flex-content">
+                Обратите внимание, в методе мы просто обновляем состояние приложения, не затрагивая DOM — всю работу с DOM выполняет Vue, а вы пишете код, который занимается только логикой приложения.
+              </p>
+
+              <p class="flex-content">
+                Vue также предоставляет директиву v-model, позволяющую легко связывать элементы форм и состояние приложения:
+              </p>
+
+              <div id="accordion" role="tablist">
+                <div class="card">
+                  <div class="card-header" role="tab" id="heading1">
+                    <h5 class="mb-0">
+                      <a data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        HTMl
+                      </a>
+                    </h5>
+                  </div>
+              
+                  <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
+                    <div class="card-body">
+                      
+                      <pre>
+                        <code>
+                          &lt;div id="app-6"&gt;
+                            &lt;p&gt;
+                              {{ message }}
+                              &lt;/p&gt;
+                            &lt;input v-model="message"&gt;
+                          &lt;/div&gt;
+                        </code>
+                      </pre>
+                        
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <div class="card-header" role="tab" id="heading2">
+                    <h5 class="mb-0">
+                      <a class="collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        JS
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
+                    <div class="card-body">
+  
+                      <pre>
+                        <code>
+                          var app = new Vue({
+                            el: '#app-6',
+                            data {
+                              message: "Привет, Vue!"
+                            }
+                          })
+                        </code>
+                      </pre>
+  
+                    </div>
+                  </div>
+                </div>
+
+                <!-- -->
+                <h2>Разбиение приложения на компоненты</h2>
+            <hr>
+            <div class="alert alert-info" role="alert">
+              <strong>Ролик:</strong> <a href="https://scrimba.com/p/pXKqta/czPNaUr" target="_balnk">Пройдите этот урок на Scrimba</a>
+            </div>
+            <p class="flex-content">
+              Важной концепцией Vue являются компоненты. Эта абстракция позволяет собирать большие приложения из маленьких «кусочков». Они представляют собой пригодные к повторному использованию объекты. Если подумать, почти любой интерфейс можно представить как дерево компонентов:
+            </p>
+            <img class="img-thumbnail" src="images/components.png" alt="Thumbnail image">
+            <p class="flex-content">
+              Во Vue компонент — это, по сути, экземпляр Vue с предустановленными опциями. Создать новый компонент во Vue просто:
+            </p>
+
+            <div id="accordion" role="tablist">
+              <div class="card">
+                <div class="card-header" role="tab" id="heading1">
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                      JS
+                    </a>
+                  </h5>
+                </div>
+            
+                <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
+                  <div class="card-body">
+                    
+                    <pre>
+                      <code>
+                        // Определяем новый компонент под именем todo-item
+                        Vue.component('todo-item', {
+                          template: '&lt;li&gt;Это одна задача в списке&lt;/li&gt;>'
+                        })
+
+                        var app = new Vue(...)
+                      </code>
+                    </pre>
+                      
+                  </div>
+                </div>
+              </div>
+              <p class="flex-content">
+                Теперь его можно использовать в шаблоне другого компонента:
+              </p>
+              <div class="card">
+                <div class="card-header" role="tab" id="heading2">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                      HTML
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
+                  <div class="card-body">
+
+                    <pre>
+                      <code>
+                        &lt;ol&gt;
+                          &lt;!-- Создаём экземпляр компонента todo-item --&gt;
+                            {{ message }}
+                            &lt;todo-item&gt;&lt;/todo-item&gt;
+                        &lt;/ol&gt;
+                      </code>
+                    </pre>
+
+                  </div>
+                </div>
+              </div>
+
+              <p class="flex-content">
+                Пока что у нас получилось так, что во всех элементах списка будет один и тот же текст — это не очень-то интересно. Хотелось бы иметь возможность передавать данные от родительского в дочерние компоненты. Давайте изменим определение компонента, чтобы он мог принимать входной параметр:
+              </p>
+
+              <div id="accordion" role="tablist">
+                <div class="card">
+                  <div class="card-header" role="tab" id="heading1">
+                    <h5 class="mb-0">
+                      <a data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        JS
+                      </a>
+                    </h5>
+                  </div>
+              
+                  <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
+                    <div class="card-body">
+                      
+                      <pre>
+                        <code>
+                          Vue.component('todo-item', {
+                            props: ['todo'],
+                            template: '<li>{{ todo.text }}</li>'
+                          })
+                          
+                          var app7 = new Vue({
+                            el: '#app-7',
+                            data: {
+                              groceryList: [
+                                { id: 0, text: 'Овощи' },
+                                { id: 1, text: 'Сыр' },
+                                { id: 2, text: 'Что там ещё люди едят?' }
+                              ]
+                            }
+                          })
+                        </code>
+                      </pre>
+                        
+                    </div>
+                  </div>
+                </div>
+                <p class="flex-content">
+                  Теперь его можно использовать в шаблоне другого компонента:
+                </p>
+                <div class="card">
+                  <div class="card-header" role="tab" id="heading2">
+                    <h5 class="mb-0">
+                      <a class="collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        HTML
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
+                    <div class="card-body">
+  
+                      <pre>
+                        <code>
+                          &lt;ol&gt;
+                            &lt;!-- Теперь мы можем передать каждому компоненту todo-item объект
+                            с информацией о задаче, который будет динамически меняться.
+                            Мы также определяем для каждого компонента "key",
+                            значение которого мы разберём далее в руководстве. --&gt;
+                              &lt;todo-item
+                              v-for="item in groceryList"
+                              v-bind:todo="item"
+                              v-bind:key="item.id"
+                              &gt;&lt;/todo-item&gt;
+                          &lt;/ol&gt;
+                        </code>
+                      </pre>
+  
+                    </div>
+                  </div>
+                </div>
+
+                <p class="flex-content">
+                  Конечно, этот пример слегка надуман, но посмотрите сами — мы разделили наше приложение на два меньших объекта, и дочерний, в разумной мере, отделён от родительского с помощью интерфейса входных параметров. Теперь можно улучшать компонент <todo-item>, усложнять его шаблон и логику, но не влиять на родительское приложение.
+                </p>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="box-containre text-white">
+          © 2019 Написан Лабунским Романом в рамках курсового проекта
+        </div>
+      </footer>
+	    <!-- ./Footer -->
+    
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
